@@ -1,0 +1,19 @@
+{
+  "name": "@orquestador/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Unica fuente de verdad de contratos TypeScript compartidos entre frontend y backend",
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "default": "./index.ts"
+    },
+    "./*": {
+      "types": "./*.ts",
+      "default": "./*.ts"
+    }
+  }
+}

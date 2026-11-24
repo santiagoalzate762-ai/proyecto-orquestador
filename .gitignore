@@ -1,0 +1,32 @@
+# Dependencias
+node_modules/
+
+# Compilados y distribucion
+dist/
+build/
+*.tsbuildinfo
+
+# Variables de entorno y secretos (NUNCA subir a GitHub)
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Cobertura y temporales
+coverage/
+.vercel/
+.cache/
+
+# Editores y sistema operativo
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

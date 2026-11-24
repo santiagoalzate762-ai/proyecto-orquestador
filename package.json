@@ -1,0 +1,30 @@
+{
+  "name": "proyecto-orquestador",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plataforma web conectada a GitHub para desarrollo por capas estrictas y auditorias cruzadas",
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "workspaces": [
+    "contracts",
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "typecheck:contracts": "tsc --noEmit -p contracts/tsconfig.json",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build:backend": "npm run build --workspace=backend",
+    "typecheck:frontend": "npm run typecheck --workspace=frontend",
+    "typecheck:backend": "npm run typecheck --workspace=backend",
+    "prisma:migrate:dev": "npx prisma migrate dev --schema=backend/prisma/schema.prisma",
+    "prisma:migrate:deploy": "npx prisma migrate deploy --schema=backend/prisma/schema.prisma",
+    "prisma:generate": "npx prisma generate --schema=backend/prisma/schema.prisma"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
